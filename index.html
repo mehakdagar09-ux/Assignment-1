@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="page-header">
+        <div class="title-wrap">
+          <span class="title-icon" aria-hidden="true">🎯</span>
+          <h1>Smart Event Dashboard</h1>
+        </div>
+        <p class="subtitle">
+          Plan, track, and showcase events with a clean, modern hub.
+        </p>
+      </header>
+
+      <main class="grid">
+        <section class="card add-card">
+          <h2>Add New Event</h2>
+          <form id="event-form">
+            <label class="field">
+              <span>Event Title:</span>
+              <input
+                type="text"
+                id="title"
+                placeholder="Enter title"
+                required
+              />
+            </label>
+
+            <label class="field">
+              <span>Event Date:</span>
+              <input type="date" id="date" required />
+            </label>
+
+            <label class="field">
+              <span>Category:</span>
+              <select id="category">
+                <option>Conference</option>
+                <option>Workshop</option>
+                <option>Meetup</option>
+                <option>Webinar</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Description:</span>
+              <textarea
+                id="description"
+                rows="4"
+                placeholder="Optional"
+              ></textarea>
+            </label>
+
+            <button class="btn primary" type="submit">Add Event</button>
+          </form>
+        </section>
+
+        <section class="card events-card">
+          <div class="events-header">
+            <h2>My Events</h2>
+            <div class="actions">
+              <button class="btn ghost" id="clear-btn">Clear All Events</button>
+              <button class="btn primary" id="sample-btn">
+                Add Sample Events
+              </button>
+            </div>
+          </div>
+          <div class="events-list" id="events-list">
+            <div class="empty">No events yet. mehak add your first event!</div>
+          </div>
+        </section>
+
+        <section class="card demo-card">
+          <h2>DOM Manipulation Demo</h2>
+          <div class="demo-row">
+            <div class="demo-label">You Pressed:</div>
+            <div class="demo-value" id="key-output">-</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
